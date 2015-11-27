@@ -13,7 +13,7 @@ angular.module('app').directive('inbox', function() {
       vm.searchText = $state.params.search;
 
       vm.searchTextChanged = function() {
-        $state.go('.', {search: vm.searchText});
+        $state.go('.', {search: vm.searchText}, {notify: false});
       };
 
       $scope.$on('$locationChangeSuccess', function() {
